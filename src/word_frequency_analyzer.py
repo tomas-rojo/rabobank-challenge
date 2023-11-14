@@ -1,6 +1,11 @@
 from collections import Counter
 from dataclasses import astuple, dataclass
 from typing import List, Tuple
+import logging
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -61,14 +66,14 @@ if __name__ == "__main__":
     n_words = 3
 
     highest_frequency = analyzer.calculate_highest_frequency(sample_text)
-    print(f"Highest frequency: {highest_frequency}")
+    logging.info("Highest frequency: %d", highest_frequency)
 
     frequency_for_word = analyzer.calculate_frequency_for_word(
         sample_text, word_to_find
     )
-    print(f"Frequency for {word_to_find!r}: {frequency_for_word}")
+    logging.info("Frequency for %s: %d", word_to_find, frequency_for_word)
 
     most_frequent_n_words = analyzer.calculate_most_frequent_n_words(
         sample_text, n_words
     )
-    print(f"Most frequent words: {most_frequent_n_words}")
+    logging.info("Most frequent words: %s", most_frequent_n_words)
