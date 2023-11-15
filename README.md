@@ -5,13 +5,13 @@ A Python class that analyze words and frequency in a text.
 Clone the repository
 ```
 git clone https://github.com/tomas-rojo/rabobank-challenge.git
-source venv/bin/activate
 cd rabobank-challenge
 ```
 ### Regular installation
 Create a virtual environment and install dependencies
 ```
 python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 ### Using Docker
