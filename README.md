@@ -5,6 +5,7 @@ A Python class that analyze words and frequency in a text.
 Clone the repository
 ```
 git clone https://github.com/tomas-rojo/rabobank-challenge.git
+source venv/bin/activate
 cd rabobank-challenge
 ```
 ### Regular installation
