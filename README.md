@@ -7,10 +7,25 @@ Clone the repository
 git clone https://github.com/tomas-rojo/rabobank-challenge.git
 cd rabobank-challenge
 ```
+### Regular installation
 Create a virtual environment and install dependencies
 ```
 python3 -m venv venv
 pip install -r requirements.txt
+```
+### Using Docker
+With the use of make commands we can simply have an image ready to use for testing and execution.
+1. **Build the image**
+```
+make build
+```
+2. **Run the tests inside the container**
+```
+make test_in_docker
+```
+3. **Run the application**
+```
+make start
 ```
 ## Usage
 
@@ -31,20 +46,4 @@ frequency_for_word = analyzer.calculate_frequency_for_word(sample_text, "the")
 
 most_frequent_n_words = analyzer.calculate_most_frequent_n_words(sample_text, 3)
 # [('the', 2), ('lake', 1), ('over', 1)]
-```
-
-## Hint: Check the options with the Make command ℹ️
-
-```Options:
-
-- make install                          Install development dependencies
-- make help                             Show this help
-- make test                             Run full test suite (flake8 and unit tests)
-- make run                              Run the application
-
- DOCKER
-
-- make build                            Build the Docker image
-- make test_in_docker                   Run the unit tests inside the container
-- make start                            Start the application inside the container
 ```
